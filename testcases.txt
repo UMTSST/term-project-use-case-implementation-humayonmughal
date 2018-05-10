@@ -1,0 +1,25 @@
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
+while (  input != "exit" )
+{
+   cin >> input ;
+    locale loc;
+   for (string::size_type i=0; i<input.length(); ++i)
+    input[i] = tolower(input[i],loc);
+   if (input == "hi")
+     cout << "hello there " << endl ;
+else if (input == "hello")
+    cout << "Hey, what's up?"<<endl;
+
+
+else
+   cout << "Well i didn't understand. I hope i will be able to, soon!" << endl ;
+}
+
+TEST_CASE( "chatbot", "[autoreply]" ) 
+{
+    REQUIRE( input(hi) == "hello there");
+    REQUIRE( input(hello) == "hey, what's up?" );
+    REQUIRE( input(how are you?) == "Well i didn't understand. I hope i will be able to, soon!" );
+}
