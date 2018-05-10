@@ -1,0 +1,5 @@
+Our communication interface will be a "File" in which we will store the asked question and we shall use this file to retrieve data from the file.
+
+
+format:
+chatbot(massages {Automation Reply})
