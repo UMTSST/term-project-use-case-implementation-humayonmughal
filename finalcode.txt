@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+   string input;
+cout << "Hello, This is Chat Bot made by Ryan" << endl ;
+  cout << "say hi" << endl ;
+ while (  input != "exit" )
+{
+   cin >> input ;
+    locale loc;
+   for (string::size_type i=0; i<input.length(); ++i)
+    input[i] = tolower(input[i],loc);
+   if (input == "hi")
+     cout << "hello there " << endl ;
+else if (input == "hello")
+    cout << "Hey, what's up?"<<endl;
+
+
+else
+   cout << "Well i didn't understand. I hope i will be able to, soon!" << endl ;
+}
+
+return 0;
+}
